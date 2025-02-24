@@ -1,0 +1,54 @@
+nav {
+    position: relative;
+    background: #FFDAB3;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.h-10 {
+    height: 5rem;
+}
+
+.roboto-slab-titletext { 
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.7rem;
+}
+
+nav .nav-item a {
+    position: relative;
+    text-decoration: none;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;
+    z-index: 1;
+    
+}
+
+.nav-item {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand-indent {
+    margin-left: 100px;
+}
+
+.navbar-collapse {
+    background-color: #FFDAB3;
+    animation: slideIn 0.5s ease-out;
+    
+}
+
+.indent-right {
+    margin-right: 40px;
+}
