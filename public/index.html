@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100..900&family=Wallpoet&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <aside>
+            <div onclick="Navigate(0)" class="brand brand-logo"><i>
+                <img src="img/brandlogo.png" style="width: 100px; height: 100px;">
+            </i>
+            </div>
+            <div onclick="Navigate(0)" class="brand brand-name">
+                <p>ALPHA<span class="brand-rex">REX</span></p>
+            </div>
+            <ul class="Links">
+                <li onclick="Navigate(0)" class="nav-item activeLink"><i class="icon fa-solid fa-house"></i>
+                    <p>Home</p>
+                </li>
+                <li class="nav-item" onclick="Navigate(1)"><i class="icon fa-solid fa-person-digging" ></i>
+                    <p>Services</p>
+                </li>
+                <li class="nav-item" onclick="Navigate(2)"><i class="icon fa-solid fa-handshake"></i>
+                    <p>Clients</p>
+                </li>
+                <li class="nav-item" onclick="Navigate(3)"><i class="icon fa-solid fa-briefcase"></i>
+                    <p>Career</p>
+                </li>
+                <li class="nav-item" onclick="Navigate(4)"><i class="icon fa-solid fa-phone"></i>
+                    <p>Contact Us</p>
+                </li>
+                <li onclick="Navigate(4)" class="login-drp">
+                        <i class="icon"></i>
+                        <p>Login As</p>           
+                </li>
+            </ul>
+            <footer>
+                <p>Copyright © 2025 Alpharex, OPC</p>
+            </footer>
+        </aside>
+
+
+        <div class="swiper mySwiper">
+            <div class="SlideContainer swiper-wrapper">
+                <div class="swiper-slide home-slide">
+
+                    <!-- ----------HOME CONTENT--------- -->
+
+                    <div class="HomeContent">
+                        <h1 class="heading">Your Power, <span class="stylized-name">Our Passion</span></h1>
+                        <h2> Engineering Expertise | Providing Expert system solutions</h2>
+                        <p class="heroline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad officia iste
+                            tenetur dolor quis officiis quidem sapiente illo nostrum mollitia.</p>
+                        <div class="buttonGroup"><button onclick="Navigate(1)">See Our Services</button><button onclick="Navigate(4)">Contact Us</button><button onclick="Navigate(4)">Continue as Guest</button></div>
+                    </div>
+                    <div class="SideImg">
+                        <div class="top-right-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                        <img src="" alt="">
+                        <div class="bottom-left-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                    </div>
+
+                        <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i></p>
+                </div>
+
+
+                    <!-- ----------HOME CONTENT END--------- -->
+
+                
+
+                <div class="swiper-slide services">
+                    
+                    <!-- ----------SERVICES--------- -->
+
+                    <h1 class="heading">Services</h1>
+                    <h2 class="sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod.</h2>
+                   
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h2>FIT-OUT WORKS</h2>
+                        <p>With a fusion of creativity and meticulous craftmanship, we tailor-fit the interiors that reflect your unique style and brand identity</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h2>ELECTRICAL WORKS</h2>
+                        <p>Elevate your space to a whole new level of functionality and aesthetics</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h2>ELV SYSTEMS</h2>
+                        <p>A wide array of auxiliary systems -- CCTV, Structured Cabling System, Alarm, ACS, and Data & Telephone Systems</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-image"></i></div>
+                        <h2>MEPF PROTECTION</h2>
+                        <p>Mechanical, Electrical, Plumbing, Fire Protection</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h2>CONSTRUCTION</h2>
+                        <p>Enhance the overall efficiency of your project, guaranteeing a well-rounded and top-tier construction experience</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                        <h2>DESIGN</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod.</p>
+                    </div>
+                    <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i></p>
+                </div>
+
+                <!-- ----------SERVICES END--------- -->
+
+                <div class="swiper-slide">
+
+                    <!-- ----------CLIENTS--------- -->
+
+                    <div class="about-us">
+                        <h1 class="heading">Clients</h1>
+                        <!-- <h3 class="sub-heading">I'm Sandith, <span class="proffesions">A Web Developer</span></h3>
+                    
+                        <div class="about-me-divison">
+                            <div class="about-me-table">
+                                <li><span>Experience:</span> 5+ years</li>
+                                <li><span>Country:</span> Sri lanka</li>
+                                <li><span>Avability:</span> 24/7 </li>
+                                <li><span>Satisfied Clients:</span>200+</li>
+                                <li><span>Age</span>:20</li>
+                                <li><span>Phone</span>:123-456-7890</li>
+                                <li><span>Language Used:</span>HTML</li>
+                                <li><span>Degree</span>:CS</li>
+                                <div class="buttonGroup"><button>Hire Me</button><button>Contact Me</button></div>
+                            </div>
+
+                            <div class="skill-bar">
+                                <li>
+                                    <p>HTML</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:99%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>CSS</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:80%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>JavaScript</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:85%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Python</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:50%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Django</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:60%"></div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div> -->
+                </div>
+                <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i></p>
+            </div>
+
+                <!-- ----------CLIENTS END--------- -->
+
+                <div class="swiper-slide gallery">
+
+                    <!-- ----------CAREER--------- -->
+                    
+                    <h1 class="heading">Career</h1>
+                    <div class="project"><img src="" alt=""></div>
+                    <div class="project"><img src="" alt=""></div>
+                    <div class="project"><img src="" alt=""></div>
+                    <div class="project"><img src="" alt=""></div>
+                    <div class="project"><img src="" alt=""></div>
+                    <div class="project"><img src="" alt=""></div>
+
+                    <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i></p>
+                </div>
+
+                    <!-- ----------CAREER END--------- -->
+
+                <div class="swiper-slide contactMe">
+
+                    <!-- ----------CONTACT US--------- -->
+
+                    <h1 class="heading">Contact Us</h1>
+                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
+                        <h3>Mobile No</h3>
+                        <p>+63 965 523 0279</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
+                        <h3>Location</h3>
+                        <p>
+                            Blk 3, Lot 19, Phase 1, Amaia Scapes Rizal,
+                            Barangay Tatala, Municipality of Binangonan, Rizal
+                        </p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>services@alpharex.net</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-globe"></i>
+                        <h3>Website</h3>
+                        <p>www.abc123.com</p>
+                    </div>
+                    <form>
+                        <h2>Send Us A Message 
+                            <!-- <div class="SocialLinks">
+                                <i class="fa-brands fa-codepen"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                            </div> -->
+                        </h2>
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="email">
+                        <textarea rows="10" placeholder="Type your Message Here..."></textarea>
+                        <button class="primary">Send</button>
+
+                    </form>
+                </div>
+
+                    <!-- ----------CONTACT US END--------- -->
+
+            </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script defer src="js/main.js"></script>
+
+</body>
+</html>
