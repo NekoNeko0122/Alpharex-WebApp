@@ -11,8 +11,8 @@ app.get("/", (req, res) => {
   res.render("index.html");
 });
 
-app.get("/header", (req, res) => {
-  res.render("header.ejs");
+app.get("/webmain", (req, res) => {
+  res.render("webmain.ejs");
 });
 
 // app.get("/contact", (req, res) => {

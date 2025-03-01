@@ -6,6 +6,7 @@
 
 body {
     height: 100vh;
+    overflow-x: hidden;
 }
 
 main {
@@ -15,12 +16,39 @@ main {
     display: flex;
     height: 100%;
     width: 100%;
+    background-color: #e2d3d3;
 }
 
-aside ul {
-    
-    padding-bottom: 15px;
+/* HAMBURGER MENU */
+
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1000;
 }
+
+aside.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out;
+    
+}
+
+.content {
+    transition: margin-left 0.3s ease-in-out;
+}
+
+
 
 aside {
     font-family: "Roboto Slab", serif;
@@ -32,8 +60,12 @@ aside {
     display: flex;
     flex-direction: column;
     height: 100%;  
-    background-color: #FFDAB3;
+    background-color: #ffdab3;
     backdrop-filter: blur(20%); 
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 500;
 }
 
 .Links {
@@ -60,6 +92,16 @@ aside li:hover {
 }
 
 aside .nav-item::after {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #b33232, transparent);
+    content: '';
+    bottom: 0px;
+}
+
+.login-drp .drp-item::after {
     position: absolute;
     width: 100%;
     left: 0px;
@@ -121,22 +163,89 @@ footer {
 }
 
 .login-drp {
+    background-color: #FFDAB3;
     margin-top: 100px;
     justify-content: center;
+    border-radius: 30px;
+    padding: 8%;
+    padding-left: 0;
+    border: none;
+    box-shadow:
+    8px 8px 15px #ccb194,
+    -8px -8px 15px #796363;
 }
+
+.login-drp:hover {
+    box-shadow: 
+    -2px -2px 5px #796363,
+    inset 8px 8px 15px #ccb194;
+}
+
+.side-guest {
+    margin-top: -15px;
+    color: #44474b;
+    font-size: 1rem;
+}
+
+/* Mobile styles */
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    right: 2;  /* Aligns the dropdown to the right */
+    margin-left: 28rem;
+    margin-top: -1.5rem;
+    align-items: center;
+    background-color: #FFDAB3;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50%); /* Positioned off-screen to the right */
+    pointer-events: none; /* Prevent interactions while hidden */
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    z-index: 1;
+    
+}
+
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown ul li {
+    justify-content: center;
+    padding: 10px;
+}
+
+.dropdown ul li:hover {
+    transform: none;
+    background-color: #ffa07a;
+}
+
+/* Show the dropdown when the parent is hovered */
+.login-drp:hover .dropdown {
+    opacity: 1; /* Make it visible */
+    transform: translateX(0); /* Slide it into place */
+    pointer-events: auto;
+}
+
 
 /* SLIDER END */
 
-.mySwiper {
 
+
+.mySwiper {
     flex: 1;
     height: 100%;
 }
 
 .home-slide {
-    color: #461616;
+    color: #442c2c;
     display: flex;
-    background-color: #343a40;
+    
+
 }
 
 .HomeContent {
@@ -151,15 +260,14 @@ footer {
 .SideImg {
     width: 30%;
 
-
-    margin: auto 10px;
-    margin-right: 80px;
-    position: relative;
+    align-content: center;
+    margin-right: 100px;
 }
 
 .SideImg img {
-    width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    will-change: transform;
+    image-rendering: auto;
 }
 
 .SideImg .top-right-corner,
@@ -179,28 +287,10 @@ footer {
     rotate: 90deg;
 }
 
-.hr1 {
-    width: 150px;
-    height: 10px;
-    border: none;
-    background: #b33232;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
 
-.hr2 {
-    width: 10px;
-    height: 120px;
-    border-bottom-left-radius: 3px;
-
-    background: #b33232;
-    border: none;
-    border-bottom-right-radius: 3px;
-}
 
 .HomeContent h1 {
-    font-size: 3em;
-    font-weight: 700;
+    font-size: 4em;
     margin-bottom: 10px;
 }
 
@@ -208,7 +298,6 @@ footer {
     font-size: 2.3em;
     margin-bottom: 10px;
     font-weight: 600;
-
 }
 
 .HomeContent h1 .stylized-name {
@@ -216,30 +305,150 @@ footer {
     color: #000000;
 }
 
+.HomeContent .stylized-heading {
+    background: linear-gradient(45deg, #b33232, #FFDAB3, #000000, #b33232, #b33232);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+}
+
+
+.heroline span {
+    color: #b33232;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
 .HomeContent .heroline {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     padding-right:50px;
+    text-align: justify;
+    margin-right: -210px;
 }
 
 .buttonGroup {
+    
     display: flex;
     padding: 10px 0px;
-    margin-top: 10px;
+    margin-top: 20px;
+    height: 80px;
+    gap: 30px;
 }
 
-.buttonGroup button ,.primary{
+.buttonGroup button , .primary {
+    flex: 1;
+    max-width: 250px;
     padding: 10px 20px;
+    background-color: #e2d3d3;
     border: none;
     outline: none;
     font-size: 1.2rem;
     font-weight: 600;
     margin: 5px;
     cursor: pointer;
-    background-color: #b33232;
-    color: #ffffff;
-    border-radius: 5px;
+    color: #b33232;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 8px 8px 15px #5a4747,
+    -8px -8px 15px #ffffff;;
 }
+
+.buttonGroup button svg {
+    position: absolute;
+    z-index: 9;
+    margin-top: -2px;
+    margin-left: -20px;
+    
+}
+
+.buttonGroup button .arr-1 {
+    opacity: 0;
+    transform: translate(-25px);
+    transition: transform 0.6s ease, opacity 0.6s ease; 
+    
+}
+
+.buttonGroup button .arr-2 {
+    
+    transition: transform 0.6s ease, opacity 0.6s ease; 
+    
+}
+
+.buttonGroup button .buttontext {
+    font-family: "Chakra Petch", serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-right: 30px;
+    transition: all 0.3s ease;
+}
+
+.buttonGroup button:hover .arr-1{
+    opacity: 1;
+    transform: translateX(0); 
+    margin-left: -30px;
+}
+
+.buttonGroup button:hover .arr-2{
+    opacity: 0;
+    transform: translateX(80px); 
+}
+
+.buttonGroup button:hover .buttontext {
+    margin-right: -20px;
+}
+
+
+.buttonGroup button:hover {
+    background-color: #FFDAB3;
+    color: rgb(0, 0, 0);
+}
+
+/* 
+
+
+.buttonGroup button .buttontext {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.buttonGroup button:hover {
+    box-shadow: 0 0 0 3px #ca9674;
+    color: #212121;
+    border-radius: 12px;
+}
+
+.buttonGroup button:hover .arr-1 {
+    right: -25%;
+}
+
+.buttonGroup button:hover .arr-2 {
+    left: 16px;
+}
+
+.buttonGroup button:hover svg {
+    fill: #b33232;
+}
+
+.buttonGroup button:hover .buttontext {
+    transform: translateX(12px);
+}
+
+.buttonGroup button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+
+.buttonGroup button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #76b5c5;
+} */
+
+
 
 .slide-help {
     position: absolute;
@@ -257,9 +466,10 @@ footer {
 
 .mySwiper {
     width: 80vw;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     background-color: #343a40;
+    
 }
 
 .swiper-slide {
@@ -267,117 +477,38 @@ footer {
 
     background-color: #e2d3d3;
     height: 100%;
+    background-image: url(../img/bghome4.png);
+    background-position: center;
+    background-size: cover;
 }
 
-.about-us {
-    width:100%;
-    height:100%;
-
-    padding: 100px;
-    color: white;
-}
 
 .heading {
     font-family: "Bruno Ace SC", serif;
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #b33232;
 }
 
-.about-us h3 {
-    padding: 10px;
-
-}
-
-.aboutme-deatils {
-    padding: 20px;
-    font-weight: 300;
-}
-
-.about-me-divison {
-    display: flex;
-}
-
-.about-me-table {
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-}
-
-.about-me-table li {
-    padding: 20px;
-    position: relative;
-}
-
-.about-me-table li::after {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    height: 1px;
-    background: linear-gradient(to left, transparent, #ffffff77, transparent);
-    content: '';
-    bottom: 0px;
-}
-
-.about-me-table span {
-    color: #2596be;
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-.about-me-table .buttonGroup {
-    grid-column: 1/span 2;
-    justify-content: center;
-    padding: 50px;
-    flex: 1;
-}
-
-.skill-bar {
-    width: calc(40% - 20px);
-}
-
-.skill-bar li {
-    width: 100%;
-    padding: 10px;
-}
-
-.skill-bar p {
-    color: #2596be;
-    font-weight: bold;
-    margin: 10px;
-}
-
-.skill-bar .bar {
-    width: 100%;
-    height: 15px;
-    background-color: #272c30;
-    border-radius: 20px;
-
-}
-
-.active-bar {
-    background-color: #2596be;
-    height: 100%;
-    width: auto;
-    border-radius: 20px;
-}
-
 .services {
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(3, calc(34% - 10px));
-    grid-template-rows: 100px calc(0% - 50px) calc(50% - 50px);
-    padding: 100px ;
-    box-sizing: border-box;
+    padding: 100px;
 }
 
-.services h1, 
-.services h2 {
-    grid-column: 1/span 3;
+.gridsix {
+    display: grid;
+    max-width: 1360px;
+    margin: 0 auto;
+    gap: 3rem;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    aspect-ratio: 2;
+    margin-top: 3rem;
 }
+
+
 
 .services .sub-heading {
-    margin-top: -40px;
+   
     color: #000000;
     font-weight: 300;
 }
@@ -389,16 +520,18 @@ footer {
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.437);
     border-radius: 10px;
-    margin: 20px;
+    /* margin: 20px; */
     backdrop-filter: blur(10px);
     flex-direction: column;
     transition-duration: 0.25s;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .services .service i {
     font-size: 3rem;
     color:#FFDAB3;
+    transition: all 0.3s ease;
 }
 
 .services .service .service-icon {
@@ -408,6 +541,7 @@ footer {
 .service h2{
     margin-bottom: 20px;
     color:#FFDAB3;
+    transition: all 0.3s ease;
 }
 .service:hover {
     transform: scale(1.1);
@@ -562,4 +696,62 @@ form h2 .SocialLinks i:hover{
  
 .about-us{
     overflow: auto;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+
+@media (max-width: 1194px) {
+    .hamburger {
+        display: block;
+    }
+
+    aside {
+        width: 20rem; 
+    }
+
+    .content {
+        margin-left: -20rem;
+    }
+
+    .container.open .content {
+        margin-left: 0; 
+    }
+}
+
+@media (min-width: 1194px) {
+    aside {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .hamburger {
+        display: none; 
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 1538px) {
+    .buttonGroup button .buttontext {
+        
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
 }
