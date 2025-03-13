@@ -164,24 +164,36 @@ const valueSlide = new Swiper('.values-container', {
 
 // ------- RESIZE -------
 
-function handleResize() {
-    const width = window.innerWidth;
+// function handleResize() {
+//     const width = window.innerWidth;
     
-    if (width > 992) {
-        menu.classList.remove('open');
-        container.classList.remove('open');
-    }
+//     if (width > 992) {
+//         menu.classList.remove('open');
+//         container.classList.remove('open');
+//     }
 
-    if (width < 1450) {
-        guessBtn.textContent = "As Guest";
-        servBtn.textContent = "Our Services";
-    } else {
-        guessBtn.textContent = "Continue As Guest";
-        servBtn.textContent = "See Our Services"
-    }
+//     if (width < 1450) {
+//         guessBtn.textContent = "As Guest";
+//         servBtn.textContent = "Our Services";
+//     } else {
+//         guessBtn.textContent = "Continue As Guest";
+//         servBtn.textContent = "See Our Services"
+//     }
 
-}
+// }
 
-window.addEventListener('resize', handleResize);
-handleResize();
+// window.addEventListener('resize', handleResize);
+// handleResize();
 
+
+function adjustHeight() {
+    // Set the height of the .fullscreen element to the actual window height
+    document.querySelector('.mySwiper').style.height = window.innerHeight + 'px';
+    console.log(window.innerHeight);
+  }
+
+  // Adjust the height on page load
+  window.addEventListener('load', adjustHeight);
+
+  // Adjust the height when the window is resized
+  window.addEventListener('resize', adjustHeight);
