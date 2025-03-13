@@ -67,7 +67,7 @@ function slideShow() {
     let count = 0;
     
     if (active === mySlide.length - 3) {
-        mySlide[12].classList.add("activeSlide");
+        mySlide[mySlide.length - 3].classList.add("activeSlide");
         let firstItem = mySlide.shift();
         mySlide.push(firstItem);
         active--;

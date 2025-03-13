@@ -1,9 +1,9 @@
 {
   "name": "alpharex-webapp",
   "version": "1.0.0",
-  "main": "src/app.js",
+  "main": "netlify/src/app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node netlify/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
