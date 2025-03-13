@@ -14,7 +14,7 @@ var hammer = new Hammer(document.documentElement);
 
 var swiper = new Swiper(".swiper", {
     effect: "cube",
-    allowTouchMove: false,
+    allowTouchMove: true,
     grabCursor: false,
     cubeEffect: {
         shadow: true,
