@@ -1,11 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const { handler } = require("@netlify/functions");
 
 const app = express();
 const port = 3000;
-app.use(express.static("public/views"));
+app.set("views", path.join(__dirname, "public", "views"));
+app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
