@@ -1,7 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
-
 const { handler } = require("@netlify/functions");
 
 const app = express();
@@ -16,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/webmain", (req, res) => {
-  res.render("webmain.ejs");
+  res.render("webmain.html");
 });
 
 // app.get("/contact", (req, res) => {
