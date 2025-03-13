@@ -6,3 +6,8 @@
   from = "/"
   to = "/.netlify/functions/app"
   status = 200
+
+[[redirects]]
+  from "/webmain"
+  to = "/.netlify/functions/app"
+  status = 200
