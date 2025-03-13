@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/webmain", (req, res) => {
-  res.render("views/webmain.ejs");
+  res.render("webmain.html");
 });
 
 // app.get("/contact", (req, res) => {
