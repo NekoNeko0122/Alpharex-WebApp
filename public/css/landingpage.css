@@ -222,10 +222,10 @@ footer {
     background-color: #ffa07a;
 }
 
-/* Show the dropdown when the parent is hovered */
+
 .login-drp:hover .dropdown {
-    opacity: 1; /* Make it visible */
-    transform: translateX(0); /* Slide it into place */
+    opacity: 1; 
+    transform: translateX(0); 
     pointer-events: auto;
 }
 
@@ -236,28 +236,23 @@ footer {
 
 .mySwiper {
     flex: 1;
-    
     overflow: hidden;
 }
 
 .home-slide {
     color: #442c2c;
     display: flex;
-    
-
 }
 
 .HomeContent {
     margin: auto 0px;
     flex: 1;
     height: auto;
-    
     padding: 50px;
     user-select: none;
 }
 
 .SideImg {
-
     margin-right: 50px;
 }
 
@@ -267,14 +262,12 @@ footer {
 
 
 .HomeContent h1 {
-    
-    font-size: 2.5vw;
-    
+    font-size: max(2.5vw, 30px);
     margin-bottom: 10px;
 }
 
 .HomeContent h2 {
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 20px);
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -287,28 +280,30 @@ footer {
 .heroline span {
     color: #b33232;
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: max(1.2vw, 16px);
 }
 
 .heroline {
-    font-size: 1.5rem;
+    font-size: max(1.2vw, 16px);
     font-weight: 500;
-    padding-right:50px;
+    padding-right: 50px;
     text-align: justify;
     margin-right: -210px;
 }
 
 .buttonGroup {
-    
+    position: relative;
     display: flex;
     padding: 10px 0px;
     margin-top: 20px;
-    height: 80px;
+    height: 100%;
     gap: 30px;
+    margin-right: -210px;
 }
 
 .animated-btn {
     flex: 1;
+    height: 50px;
     max-width: 250px;
     background-color: #e2d3d3;
     border: none;
@@ -389,15 +384,14 @@ footer {
 
 .mySwiper {
     width: 80vw;
-    height: 100dvh;
+    height: 100vh;
     overflow: hidden;
     background-color: #343a40;
     
 }
 
 .swiper-slide {
-    width: 100%;
-
+    width: 100vw;
     background-color: #e2d3d3;
     height: 100%;
     background-image: url(../img/bghome4.png);
@@ -430,8 +424,9 @@ footer {
     gap: 3rem;
     grid-template-columns: repeat(3, minmax(100px, 1fr));
     grid-template-rows: repeat(2, 1fr);
-    aspect-ratio: 2;
-    margin-top: 3rem;
+    /* aspect-ratio: 2; */
+    height: 80%;
+    margin-top: 3vh;
 }
 
 
@@ -468,7 +463,7 @@ footer {
 
 .services .service p {
     font-weight: 450;
-    font-size: 1.3rem;
+    font-size: 1.1vw;
     color: #f3d9be;
 }
 
@@ -901,7 +896,26 @@ form .SocialLinks:hover, form .SocialLinks i:hover{
     .content {
         margin-left: 0;
     }
+}
 
+@media (max-width: 1300px) {
+    .buttonGroup {
+        
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+    }
+
+    .animated-btn {
+        min-height: 50px;
+        min-width: 200px;
+        gap: 0px;
+    }
+}
+
+@media (min-width: 1668px) {
+    
 }
 
 @media (max-width: 1538px) {
