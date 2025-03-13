@@ -5,7 +5,7 @@ const { handler } = require("@netlify/functions");
 
 const app = express();
 const port = 3000;
-app.use(express.static("public"));
+app.use(express.static("public/views"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
