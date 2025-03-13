@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const { handler } = require("@netlify/functions");
+const { createHandler } = require("@netlify/functions");
 
 const app = express();
 const port = 3000;
@@ -14,13 +14,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/webmain", (req, res) => {
-  res.render("webmain.ejs");
+  res.render("views/webmain.ejs");
 });
 
 // app.get("/contact", (req, res) => {
 //   res.render("contact.ejs");
 // });
 
-exports.handler = async (event, context) => {
-  return handler(app)(event, context); // Properly pass the Express app to the Netlify function handler
-};
+exports.handler = createHandler(app);
