@@ -6,7 +6,7 @@ const { handler } = require("@netlify/functions");
 
 const app = express();
 const port = 3000;
-app.set("views", path.join(__dirname, "public", "views"));
+
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/webmain", (req, res) => {
-  res.render("webmain.html");
+  res.render("webmain.ejs");
 });
 
 // app.get("/contact", (req, res) => {
