@@ -1007,7 +1007,7 @@ form .SocialLinks:hover, form .SocialLinks i:hover{
 }
 
 
-@media (max-width: 1366px) {
+@media (max-width: 1700px) {
     .hamburger {
         display: block;
     }
@@ -1025,7 +1025,7 @@ form .SocialLinks:hover, form .SocialLinks i:hover{
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1700px) {
     aside {
         transform: translateX(0);
         opacity: 1;
