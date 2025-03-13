@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const { createHandler } = require("@netlify/functions");
+const { handler } = require("@netlify/functions");
 
 const app = express();
 const port = 3000;
@@ -21,4 +21,6 @@ app.get("/webmain", (req, res) => {
 //   res.render("contact.ejs");
 // });
 
-exports.handler = createHandler(app);
+exports.handler = async (event, context) => {
+  return handler(app)(event, context); // Wrapping Express app with handler
+};
