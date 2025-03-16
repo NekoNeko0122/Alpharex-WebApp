@@ -1,4 +1,4 @@
-@media (max-width: 1194px) {
+@media (max-width: 1668px) {
     .hamburger {
         display: block;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 1194px) {
+@media (min-width: 1668px) {
     aside {
         transform: translateX(0);
         opacity: 1;
