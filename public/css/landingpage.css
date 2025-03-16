@@ -242,8 +242,6 @@ footer {
 .home-slide {
     color: #442c2c;
     display: flex;
-    overflow: hidden;
-    width: 100% !important;
 }
 
 .HomeContent {
@@ -260,6 +258,11 @@ footer {
 
 .SideImg img {
     height: 100%;
+}
+
+.swiper-slide-next {
+    
+    visibility: hidden !important;
 }
 
 
