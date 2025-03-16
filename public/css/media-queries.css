@@ -1,4 +1,4 @@
-@media (max-width: 1360px) {
+@media (max-width: 1194px) {
     .hamburger {
         display: block;
     }
@@ -16,11 +16,25 @@
     }
 }
 
-/* @media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
-    
-} */
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+    .hamburger {
+        display: block;
+    }
 
-@media (min-width: 1360px) {
+    aside {
+        width: 20rem; 
+    }
+
+    .content {
+        margin-left: -20rem;
+    }
+
+    .container.open .content {
+        margin-left: 0; 
+    }
+}
+
+@media (min-width: 1194px) {
     aside {
         transform: translateX(0);
         opacity: 1;
