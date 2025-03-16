@@ -244,12 +244,15 @@ footer {
     display: flex;
 }
 
+
+
 .HomeContent {
     margin: auto 0px;
     flex: 1;
     height: auto;
     padding: 50px;
     user-select: none;
+    width: auto;
 }
 
 .SideImg {
@@ -265,6 +268,9 @@ footer {
     visibility: hidden !important;
 }
 
+.core-values.swiper-slide-next {
+    visibility: visible !important;
+}
 
 .HomeContent h1 {
     font-size: max(2.5vw, 30px);
