@@ -8,8 +8,6 @@ const prevSlide = document.getElementById("prev");
 const cardwrapper = document.getElementById("card-container");
 
 
-var hammer = new Hammer(document.documentElement);
-
 // ------- SWIPER -------
 
 var swiper = new Swiper(".swiper", {
@@ -37,6 +35,26 @@ function Navigate(indx) {
     Array.from(document.querySelectorAll(".Links li"))[indx].classList.add("activeLink")
     swiper.slideTo(indx, 1000, true)
 }
+
+const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+// Function to remove translate3d but keep rotation
+function adjustTransform() {
+  const currentTransform = swiperWrapper.style.transform;
+  console.log(currentTransform);
+  // Check if translate3d is present and adjust it
+  if (currentTransform.includes('translate3d')) {
+    swiperWrapper.style.transform = currentTransform.replace("-563px", '0px');
+    console.log('this is the new one ' + swiperWrapper.style.transform);
+  }
+}
+
+// Add an event listener for when the swiper is updated (after a slide change)
+swiper.on('slideChange', function () {
+  adjustTransform();
+});
+
+adjustTransform();
 
 // ------- TOUCH -------
 

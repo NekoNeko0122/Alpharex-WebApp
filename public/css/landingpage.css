@@ -252,7 +252,6 @@ footer {
     height: auto;
     padding: 50px;
     user-select: none;
-    width: auto;
 }
 
 .SideImg {
@@ -263,14 +262,7 @@ footer {
     height: 100%;
 }
 
-.swiper-slide-next {
-    
-    visibility: hidden !important;
-}
 
-.core-values.swiper-slide-next {
-    visibility: visible !important;
-}
 
 .HomeContent h1 {
     font-size: max(2.5vw, 30px);

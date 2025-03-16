@@ -43,9 +43,19 @@
     }
 } */
 
-@media (min-width: 1366px) {
+@media (max-width: 1366px) {
+    .swiper-slide-next {
     
+        visibility: hidden !important;
+    }
+    
+    .core-values.swiper-slide-next {
+        visibility: visible !important;
+    }
+
 }
+
+
 
 @media (max-width: 1300px) {
     .buttonGroup {
