@@ -33,7 +33,7 @@
 
 
 
-@media only screen 
+/* @media only screen 
   and (min-width: 1024px) 
   and (max-height: 1366px) 
   and (orientation: landscape) 
@@ -41,7 +41,7 @@
     .swiper-wrapper {
         transform: translate3d(0px, 0px, 0px) !important;
     }
-}
+} */
 
 @media (min-width: 1366px) {
     
