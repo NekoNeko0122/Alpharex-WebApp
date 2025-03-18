@@ -7,9 +7,9 @@
         width: 20rem; 
     }
 
-    /* .content {
+    .content {
         margin-left: -20rem;
-    } */
+    }
 
     .container.open .content {
         margin-left: 0; 
@@ -51,6 +51,9 @@
     
     .core-values.swiper-slide-next {
         visibility: visible !important;
+    }
+    .content {
+        margin-left: 0;
     }
 
 }
