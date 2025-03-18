@@ -36,42 +36,6 @@ function Navigate(indx) {
     swiper.slideTo(indx, 1000, true)
 }
 
-const swiperWrapper = document.querySelector('.swiper-wrapper');
-
-// Function to remove translate3d but keep rotation
-function adjustTransform() {
-  const currentTransform = swiperWrapper.style.transform;
-  console.log(currentTransform);
-  // Check if translate3d is present and adjust it
-  if (currentTransform.includes('translate3d')) {
-    swiperWrapper.style.transform = currentTransform.replace("-563px", '0px');
-    console.log('this is the new one ' + swiperWrapper.style.transform);
-  }
-}
-
-// Add an event listener for when the swiper is updated (after a slide change)
-swiper.on('slideChange', function () {
-  adjustTransform();
-});
-
-adjustTransform();
-
-// ------- TOUCH -------
-
-// hammer.on('swiperight', function() {
-//     var currentIndex = swiper.realIndex;  
-//     if (currentIndex > 0) {
-//         Navigate(currentIndex - 1);
-//     }
-// });
-
-// hammer.on('swipeleft', function() {
-//     var currentIndex = swiper.realIndex; 
-//     if (currentIndex < swiper.slides.length - 1) {
-//         Navigate(currentIndex + 1);
-//     }
-// });
-
 // ------- HAMBURGER SLIDE -------
 
 function toggleMenu() {

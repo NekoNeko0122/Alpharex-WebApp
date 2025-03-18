@@ -242,6 +242,7 @@ footer {
 .home-slide {
     color: #442c2c;
     display: flex;
+    /* margin-right: auto; */
 }
 
 
@@ -252,10 +253,11 @@ footer {
     height: auto;
     padding: 50px;
     user-select: none;
+    margin-right: -210px ;
 }
 
 .SideImg {
-    margin-right: 50px;
+    margin-right: -250px;
 }
 
 .SideImg img {
@@ -291,7 +293,7 @@ footer {
     font-weight: 500;
     padding-right: 50px;
     text-align: justify;
-    margin-right: -210px;
+    
 }
 
 .buttonGroup {
@@ -301,7 +303,7 @@ footer {
     margin-top: 20px;
     height: 100%;
     gap: 30px;
-    margin-right: -210px;
+    
 }
 
 .animated-btn {
