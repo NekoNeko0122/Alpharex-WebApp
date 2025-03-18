@@ -7,9 +7,9 @@
         width: 20rem; 
     }
 
-    .content {
+    /* .content {
         margin-left: -20rem;
-    }
+    } */
 
     .container.open .content {
         margin-left: 0; 
