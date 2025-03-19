@@ -258,7 +258,9 @@ footer {
     margin-right: -210px ;
 }
 
-
+.SideImg {
+    margin-right: 10px;
+}
 
 .SideImg img {
     height: 100%;

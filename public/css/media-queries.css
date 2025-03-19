@@ -1,4 +1,4 @@
-@media (max-width: 1194px) {
+@media (max-width: 1366px) {
     .hamburger {
         display: block;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 1194px) {
+@media (min-width: 1366px) {
     aside {
         transform: translateX(0);
         opacity: 1;
@@ -31,7 +31,7 @@
     }
 }
 
-@media (max-width: 1366px) {
+/* @media (max-width: 1366px) {
     .SideImg {
         margin-right: -510px;
     }
@@ -41,7 +41,7 @@
     .SideImg {
         margin-right: 10px;
     }
-}
+} */
 
 
 @media (max-width: 1300px) {
