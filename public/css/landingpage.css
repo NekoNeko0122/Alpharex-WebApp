@@ -421,7 +421,7 @@ footer {
 }
 
 .services {
-    padding: 100px;
+    padding: 70px;
     
 }
 
@@ -872,11 +872,7 @@ form .SocialLinks:hover, form .SocialLinks i:hover{
     }
 }
 
-.swiper-slide-next {
-    
-    visibility: hidden !important;
-}
-
-.core-values.swiper-slide-next {
-    visibility: visible !important;
+.swiper-cube .swiper-slide-next {
+   visibility: hidden !important;
+   z-index: -5;
 }
