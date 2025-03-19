@@ -243,25 +243,28 @@ footer {
     color: #442c2c;
     display: flex;
     margin-right: auto;
+    
 }
 
 
 
 .HomeContent {
-    margin: auto 0px;
+    margin: auto;
     flex: 1;
     height: auto;
+    
     padding: 50px;
     user-select: none;
     margin-right: -210px ;
 }
 
 .SideImg {
-    margin-right: 2vw;
+    margin-right: 10px;
 }
 
 .SideImg img {
     height: 100%;
+    
 }
 
 
@@ -869,4 +872,11 @@ form .SocialLinks:hover, form .SocialLinks i:hover{
     }
 }
 
+.swiper-slide-next {
+    
+    visibility: hidden !important;
+}
 
+.core-values.swiper-slide-next {
+    visibility: visible !important;
+}
