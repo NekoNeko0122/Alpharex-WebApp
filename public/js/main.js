@@ -171,7 +171,6 @@ const valueSlide = new Swiper('.values-container', {
 function adjustHeight() {
     // Set the height of the .fullscreen element to the actual window height
     document.querySelector('.mySwiper').style.height = window.innerHeight + 'px';
-    console.log(window.innerHeight);
   }
 
   // Adjust the height on page load
@@ -179,3 +178,24 @@ function adjustHeight() {
 
   // Adjust the height when the window is resized
   window.addEventListener('resize', adjustHeight);
+
+
+const isIpadPro11 = window.matchMedia("(min-width: 834px) and (max-width: 1194px)").matches;
+
+// Detect iPad Pro 12.9-inch using matchMedia
+const isIpadPro12 = window.matchMedia("(min-width: 1024px) and (max-width: 1366px)").matches;
+
+
+if (isIpadPro11) {
+  console.log("iPad Pro 11-inch detected!");
+  // Run JS code specific to iPad Pro 11
+  guessBtn.textContent = "IPAD PRO 11";
+  servBtn.textContent = "IPAD PRO 11"
+} else if (isIpadPro12) {
+  console.log("iPad Pro 12.9-inch detected!");
+  guessBtn.textContent = "IPAD PRO 12";
+  servBtn.textContent = "IPAD PRO 12"
+  
+} else {
+  console.log("Not iPad Pro!");
+}

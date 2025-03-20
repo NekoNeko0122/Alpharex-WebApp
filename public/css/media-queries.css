@@ -1,4 +1,4 @@
-/* @media (max-width: 1194px) {
+@media (max-width: 1194px) {
     .hamburger {
         display: block;
     }
@@ -14,13 +14,13 @@
     .container.open .content {
         margin-left: 0; 
     }
-} */
+}
 
 @media (min-width: 1366px) {
-    /* aside {
+    aside {
         transform: translateX(0);
         opacity: 1;
-    } */
+    }
 
     .hamburger {
         display: none; 
@@ -70,21 +70,5 @@
     }
 }
 
-@media only screen and (max-width: 1366px) and (orientation: landscape) {
-    .hamburger {
-        display: block;
-    }
 
-    aside {
-        width: 20rem; 
-    }
-
-    .content {
-        margin-left: -20rem;
-    }
-
-    .container.open .content {
-        margin-left: 0; 
-    }
-}
 
