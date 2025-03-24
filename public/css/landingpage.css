@@ -149,9 +149,8 @@ aside .brand:hover {
 }
 
 footer {
-    position: relative;
-    bottom:5px;
-    right:0px;
+    position: absolute;
+    bottom: 10px;
     text-align: center;
     justify-content: center;
     color:#442c2c;
