@@ -74,7 +74,7 @@
   and (-webkit-min-device-pixel-ratio: 1.5) {
     
     .services {
-        visibility: hidden;
+        visibility: hidden !important;
     }
 }
 
