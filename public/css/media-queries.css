@@ -4,7 +4,7 @@
     }
 
     .content {
-        margin-left: -20rem;
+        margin-left: -18rem;
     }
 
     .container.open .content {
@@ -22,9 +22,7 @@
         display: none; 
     }
 
-    .content {
-        margin-left: 0;
-    }
+    
 }
 
 /* @media (max-width: 1366px) {
@@ -73,8 +71,12 @@
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1.5) {
     
-    .services {
+    .services.swiper-slide-next {
         visibility: hidden !important;
+    }
+
+    .SideImg {
+        margin-right: -510px;
     }
 }
 
