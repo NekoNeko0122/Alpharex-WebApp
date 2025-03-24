@@ -872,7 +872,4 @@ form .SocialLinks:hover, form .SocialLinks i:hover{
     }
 }
 
-.swiper-cube .swiper-slide-next {
-   visibility: hidden !important;
-   z-index: -5;
-}
+
