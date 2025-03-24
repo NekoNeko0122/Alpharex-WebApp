@@ -1,4 +1,4 @@
-/* @media (max-width: 1366px) {
+@media (max-width: 1194px) {
     .hamburger {
         display: block;
     }
@@ -12,7 +12,7 @@
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1194px) {
     aside {
         transform: translateX(0);
         opacity: 1;
@@ -25,7 +25,7 @@
     .content {
         margin-left: 0;
     }
-} */
+}
 
 /* @media (max-width: 1366px) {
     .SideImg {
@@ -72,8 +72,9 @@
   and (max-height: 1366px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1.5) {
-    .hamburger {
-        display: block;
+    
+    .services {
+        visibility: hidden;
     }
 }
 
