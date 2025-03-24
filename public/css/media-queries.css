@@ -77,7 +77,8 @@
   and (-webkit-min-device-pixel-ratio: 1.5) {
 
     .services.swiper-slide-next {
-        visibility: hidden;
+        visibility: hidden !important;
+        opacity: 0;
     }
 }
 
