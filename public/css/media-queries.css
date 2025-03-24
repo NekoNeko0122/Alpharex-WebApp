@@ -80,6 +80,10 @@
         
         visibility: hidden !important;
     }
+
+    .SideImg {
+        margin-right: -510px;
+    }
 }
 
 
