@@ -194,6 +194,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         formObject[key] = value;
     });
 
+    console.log('Form Data:', formObject);
+
     // Send the form data as JSON in the fetch request
     fetch('/.netlify/functions/send-email', {
         method: 'POST',
