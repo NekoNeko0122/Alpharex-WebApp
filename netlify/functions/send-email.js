@@ -37,8 +37,8 @@ exports.handler = async (event, context) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,  // Sender address
       to: 'colocadoandrewed@gmail.com',  // Recipient address
-      subject: 'New Contact Form Submission',  // Email subject
-      text: `You have received a new message from the contact form:
+      subject: 'New Form Submission',  // Email subject
+      text: `You have received a new message from the website form:
 
       Name: ${name}
       Email: ${email}
