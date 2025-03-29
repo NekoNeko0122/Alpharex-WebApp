@@ -186,11 +186,18 @@ function adjustHeight() {
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from refreshing the page
+
+    // Convert FormData to a plain object
     const formData = new FormData(this);
-  
+    const formObject = {};
+    formData.forEach((value, key) => {
+        formObject[key] = value;
+    });
+
+    // Send the form data as JSON in the fetch request
     fetch('/.netlify/functions/send-email', {
         method: 'POST',
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formObject), // Send the form data as a plain object
         headers: {
           'Content-Type': 'application/json',
         },
@@ -207,4 +214,4 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       console.error('Error:', error);
       alert('Error occurred while sending the email.');
     });
-  });
+});
