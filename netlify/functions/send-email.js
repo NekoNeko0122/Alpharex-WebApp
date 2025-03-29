@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
     // Setup the email content
     const mailOptions = {
       from: process.env.EMAIL_USER,  // Sender address
-      to: 'services@alpharex.net',  // Recipient address
+      to: 'colocadoandrewed@gmail.com',  // Recipient address
       subject: 'New Form Submission',  // Email subject
       text: `You have received a new message from the website form:
 
