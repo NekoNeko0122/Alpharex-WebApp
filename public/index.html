@@ -417,12 +417,14 @@
                                 <p>www.abc123.com</p>
                             </div>
                         </div>
-                        <form>
+                        <form id="contactForm">
                             <h2>Send Us A Message</h2>
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="email">
-                            <textarea rows="10" placeholder="Type your Message Here..."></textarea>
-                            <button class="send-btn animated-btn">
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                            <input type="text" id="email" name="email" placeholder="email" required>
+
+                            
+                            <textarea rows="10" id="message" name="message" placeholder="Type your Message Here..." required></textarea>
+                            <button type="submit" class="send-btn animated-btn">
                                 <svg width="24" height="24" class="arr-1">
                                     <use href="#arrow-right-black"></use>
                                 </svg>
