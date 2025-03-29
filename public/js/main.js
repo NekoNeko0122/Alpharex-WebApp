@@ -64,40 +64,22 @@ function slideShow() {
         mySlide[active].classList.add("activeSlide");
     }
     
-    if ((screenWidth === 1024 && screenHeight === 1366) || (screenWidth === 1366 && screenHeight === 1024) || (screenWidth === 834 && screenHeight === 1194) || (screenWidth === 1194 && screenHeight === 834)) {
-        for(var i = active + 1; i < mySlide.length; i++) {
-            count++;
-            mySlide[i].style.transform = `translateX(${10*count}vw) scale(${1 - 0.2*count}) perspective(20px)`; // rotateY(-1deg)
-            mySlide[i].style.zIndex = -count;
-            mySlide[i].style.filter = "blur(5px)";
-            mySlide[i].style.opacity = count > 2 ? 0 : 0.6;
-        }
-        count = 0;
-        for(var i = active - 1; i >=0 ; i--) {
-            count ++;
-            mySlide[i].style.transform = `translateX(${-10*count}vw) scale(${1 - 0.2*count}) perspective(20px)`; // rotateY(1deg)
-            mySlide[i].style.zIndex = -count;
-            mySlide[i].style.filter = "blur(5px)";
-            mySlide[i].style.opacity = count > 2 ? 0 : 0.6;
-        }
-    } else {
-        for(var i = active + 1; i < mySlide.length; i++) {
-            count++;
-            mySlide[i].style.transform = `translateX(${10*count}vw) scale(${1 - 0.2*count}) perspective(20px) rotateY(-1deg)`; // rotateY(-1deg)
-            mySlide[i].style.zIndex = -count;
-            mySlide[i].style.filter = "blur(5px)";
-            mySlide[i].style.opacity = count > 2 ? 0 : 0.6;
-        }
-        count = 0;
-        for(var i = active - 1; i >=0 ; i--) {
-            count ++;
-            mySlide[i].style.transform = `translateX(${-10*count}vw) scale(${1 - 0.2*count}) perspective(20px) rotateY(1deg)`; // rotateY(1deg)
-            mySlide[i].style.zIndex = -count;
-            mySlide[i].style.filter = "blur(5px)";
-            mySlide[i].style.opacity = count > 2 ? 0 : 0.6;
-        }
-    }
     
+    for(var i = active + 1; i < mySlide.length; i++) {
+            count++;
+            mySlide[i].style.transform = `translateX(${10*count}vw) scale(${1 - 0.2*count}) perspective(1rem) rotateY(-1deg)`; // rotateY(-1deg)
+            mySlide[i].style.zIndex = -count;
+            mySlide[i].style.filter = "blur(5px)";
+            mySlide[i].style.opacity = count > 2 ? 0 : 0.6;
+        }
+    count = 0;
+    for(var i = active - 1; i >=0 ; i--) {
+            count ++;
+            mySlide[i].style.transform = `translateX(${-10*count}vw) scale(${1 - 0.2*count}) perspective(1rem) rotateY(1deg)`; // rotateY(1deg)
+            mySlide[i].style.zIndex = -count;
+            mySlide[i].style.filter = "blur(5px)";
+            mySlide[i].style.opacity = count > 2 ? 0 : 0.6;
+        }  
 }
 slideShow();
 
