@@ -11,3 +11,8 @@
   from = "/webmain"
   to = "/.netlify/functions/app"
   status = 200
+
+[[redirects]]
+  from = "/send-email"  
+  to = "/.netlify/functions/send-email"
+  status = 200

@@ -188,10 +188,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     event.preventDefault(); // Prevent form from refreshing the page
     const formData = new FormData(this);
   
-    fetch('/send-email', {
-      method: 'POST',
-      body: formData
-    })
+    fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
     .then(response => response.json())
     .then(data => {
       if (data.success) {
