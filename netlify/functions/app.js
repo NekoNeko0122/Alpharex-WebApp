@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.render("index.html");
 });
 
-app.get("/webmain", (req, res) => {
+app.get("/main", (req, res) => {
   res.render("webmain.html");
 });
 

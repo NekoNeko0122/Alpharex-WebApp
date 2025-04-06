@@ -8,7 +8,7 @@
   status = 200
 
 [[redirects]]
-  from = "/webmain"
+  from = "/main"
   to = "/.netlify/functions/app"
   status = 200
 
